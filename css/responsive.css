@@ -1,0 +1,45 @@
+@media (max-width: 660px) {
+    nav .links {
+        display: none;
+    }
+
+    nav .toggle_btn {
+        display: block;
+    }
+    
+    .dropdown_menu {
+        display: block;
+    }
+    
+    .search-container {
+        width: 100%;
+        justify-content: end;
+        padding-right: 10px;
+    }
+    
+    #search-input {
+        display: none;
+        width: 0;
+    }
+    
+    #search-input.active {  
+        display: inline-block;
+        width: 40vw;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* Change the color of the clear button to the specific RGB color */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    background: url('data:image/svg+xml;utf8,<svg fill="rgb(229, 223, 214)" height="16px" viewBox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7a1 1 0 0 0-1.41 1.41L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.41z"/></svg>') no-repeat center center;
+}

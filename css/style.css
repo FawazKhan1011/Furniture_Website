@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #E5DFD6;
+    height: 100vh;
+    background-image: url('https://media.designcafe.com/wp-content/uploads/2021/12/27144355/design-cafe-modular-furniture-benefits.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+header {
+    background-color: #7D6655;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #e5dfd6d3;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Adjust padding as needed */
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+nav .links {
+    display: flex;
+    gap: 2rem;
+}
+
+nav .toggle_btn {
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-container ::placeholder{
+    color: #E5DFD6;
+}
+
+#search-input {
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    padding: 5px;
+    transition: width 0.3s ease;
+}
+
+.search-container::placeholder {
+    color: #E5DFD6;
+}
+
+#search-input:focus {
+    outline: none;
+    width: 200px;
+}
+
+#search-icon {
+    cursor: pointer;
+    color: #E5DFD6;
+    margin-left: 10px;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 170px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
