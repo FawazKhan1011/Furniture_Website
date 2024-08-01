@@ -1,5 +1,4 @@
 * {
-    padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -7,17 +6,18 @@
 
 body {
     background-color: #E5DFD6;
-    height: 100vh;
-    background-image: url('https://media.designcafe.com/wp-content/uploads/2021/12/27144355/design-cafe-modular-furniture-benefits.jpg');
-    background-size: cover;
-    background-position: center; 
+    padding: 0; 
+    margin: 0;
+    overflow-x: hidden;
 }
 
 header {
     background-color: #7D6655;
+    position: relative;
+    z-index: 1000;
 }
 
-li {
+.links li {
     list-style: none;
 }
 
@@ -33,12 +33,10 @@ a:hover {
 
 nav {
     width: 100%;
-    height: 50px;
-    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px; /* Adjust padding as needed */
+    padding: 10px;
 }
 
 nav .logo a {
@@ -65,7 +63,7 @@ nav .toggle_btn {
     align-items: center;
 }
 
-.search-container ::placeholder{
+.search-container ::placeholder {
     color: #E5DFD6;
 }
 
@@ -76,10 +74,6 @@ nav .toggle_btn {
     color: #ffffff;
     padding: 5px;
     transition: width 0.3s ease;
-}
-
-.search-container::placeholder {
-    color: #E5DFD6;
 }
 
 #search-input:focus {
@@ -94,27 +88,96 @@ nav .toggle_btn {
 }
 
 .dropdown_menu {
-    display: none;
+    display: flex; /* Set default display to flex for mobile */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 0; /* Start with max-height 0 */
+    opacity: 0; /* Start with opacity 0 */
+    padding: 0; /* Default padding */
+    gap: 0; /* Default gap */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, gap 0.3s ease; /* Animate max-height, opacity, padding, and gap */
     position: absolute;
-    right: 2rem;
-    top: 60px;
-    height: 0;
-    width: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    right: 2rem; /* Positioned from the right */
+    top: 60px; /* Positioned below the header */
+    width: 200px; /* Fixed width */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
     border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1; 
 }
 
 .dropdown_menu.open {
-    height: 170px;
+    max-height: 200px; /* Set a maximum height when open */
+    opacity: 1; /* Set opacity to 1 when open */
+    padding: 1rem; /* Adjusted padding for open state */
+    gap: 1.5rem; /* Adjusted gap for open state */
 }
 
-.dropdown_menu li {
-    padding: 0.7rem;
+
+.dropdown_menu li{
+    list-style: none;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.list {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: transform 0.5s ease;
 }
 
+.item img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffffaa;
+    color: #7D6655;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.dots li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #7D6655;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dots li.active {
+    background-color: #e5dfd6;
+}
