@@ -36,6 +36,14 @@
         border-radius: 10px; 
     }
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .furniture-item {
+        min-width: 300px; /* Reduce width for small screens */
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
 /* Change the color of the clear button to the specific RGB color */
 input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
