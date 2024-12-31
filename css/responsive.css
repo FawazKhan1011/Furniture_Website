@@ -1,53 +1,580 @@
-@media (max-width: 660px) {
-    nav .links {
-        display: none;
-    }
-
-    nav .toggle_btn {
-        display: block;
-    }
-    
-    .dropdown_menu.open {
-        display: flex;
-    }
-
-    .search-container {
-        width: 100%;
-        justify-content: end;
-        padding-right: 10px;
-    }
-    
-    #search-input {
-        display: none;
-        width: 0;
-    }
-    
-    #search-input.active {
-        display: inline-block;
-        width: 40vw;
-        margin-right: 5px;
-    }
-}
-
-@media (max-width: 450px) {
-    .dropdown_menu {
-        left: 1.5vw; 
-        width: 92.5vw;
-        border-radius: 10px; 
-    }
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .furniture-item {
-        min-width: 300px; /* Reduce width for small screens */
-        height: 200px; /* Adjust height for smaller screens */
-    }
-}
 /* Change the color of the clear button to the specific RGB color */
 input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
     height: 16px;
     width: 16px;
     background: url('data:image/svg+xml;utf8,<svg fill="rgb(229, 223, 214)" height="16px" viewBox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7a1 1 0 0 0-1.41 1.41L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.41z"/></svg>') no-repeat center center;
+}
+/* ---------- RESPONSIVE CSS FILE ---------- */
+
+/* Navigation Bar */
+@media (max-width: 768px) {
+    nav .links {
+        display: none; /* Hide main navigation links */
+    }
+
+    nav .toggle_btn {
+        display: block; /* Show the toggle button */
+    }
+
+    .dropdown_menu {
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(5px);
+        border-radius: 8px;
+        width: 90%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .dropdown_menu.open {
+        display: flex; /* Display dropdown menu when toggled */
+    }
+}
+
+/* Adjust Dropdown for Smallest Devices */
+@media (max-width: 450px) {
+    .dropdown_menu {
+        left: 4vw;
+        width: 92%;
+    }
+}
+
+/* Search Bar Adjustments */
+@media (max-width: 660px) {
+    .search-container {
+        margin-right: 10px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    #search-input {
+        display: none; /* Initially hidden */
+    }
+
+    #search-input.active {
+        display: inline-block;
+        width: 50vw; /* Full width on small screens */
+        margin-right: 1px;
+    }
+}
+
+/* Hero Section (Slider) */
+@media (max-width: 768px) {
+    .slider .buttons button {
+        font-size: 1rem; /* Smaller buttons */
+        padding: 5px 10px;
+    }
+
+    .dots li {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media (max-width: 450px) {
+    .slider .item img {
+        height: 300px; /* Smaller image height */
+    }
+}
+
+/* Specials Section */
+@media (max-width: 768px) {
+    .furniture-slider,
+    .furniture-slider2 {
+        gap: 20px; /* Reduce spacing */
+    }
+
+    .furniture-item {
+        min-width: 280px; /* Smaller item width */
+        height: 180px;
+    }
+}
+
+/* Category section responsive*/
+/* For screens larger than 770px (Desktops and Larger Tablets) */
+@media (min-width: 771px) {
+    .category {
+        height: auto; /* Flexible height based on content */
+        padding: 60px 30px; /* Add padding for spacing */
+    }
+
+    .iconlist {
+        margin-left: 40px;
+        margin-right: 40px;
+        gap: 140px; /* Adjust gap for better spacing */
+        justify-content: center; /* Center-align icons */
+    }
+
+    .iconlist img {
+        width: 180px; /* Larger icons for larger screens */
+    }
+
+    .iconlist p {
+        font-size: 20px; /* Increase text size */
+    }
+}
+
+/* For Extra Large Screens (Desktop Monitors) */
+@media (min-width: 1024px) {
+    .category {
+        padding: 70px 50px; /* Generous padding for wide layouts */
+    }
+
+    .iconlist {
+        gap: 160px; /* Wider gaps for spacious look */
+    }
+
+    .iconlist img {
+        width: 200px; /* Larger icons for bigger screens */
+    }
+
+    .iconlist p {
+        font-size: 22px; /* Increase text size for clarity */
+    }
+}
+@media (max-width: 768px) {
+    .category {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 50px 20px; /* Add padding for spacing */
+    }
+
+    .iconlist {
+        margin-left: 30px;
+        margin-right: 30px;
+        gap: 120px; /* Reduce gap between icons */
+    }
+
+    .iconlist img {
+        width: 140px; /* Slightly smaller icons */
+    }
+
+    .iconlist p {
+        font-size: 18px; /* Slightly smaller text */
+    }
+}
+
+/* Small Screens for category (Portrait Tablets, Smaller Phones) */
+@media (max-width: 576px) {
+    .category {
+        height: auto; /* Allow the section to expand dynamically */
+        padding: 40px 10px; /* Add more compact padding */
+    }
+
+    .iconlist {
+        flex-direction: column; /* Stack items vertically */
+        gap: 50px; /* Adjust gap for stacked layout */
+    }
+
+    .iconlist img {
+        width: 120px; /* Smaller icon size */
+    }
+
+    .iconlist p {
+        font-size: 16px; /* Reduce text size */
+        margin-top: 5px;
+    }
+}
+
+/* Extra Small Screens for category (Very Small Phones) */
+@media (max-width: 450px) {
+    .category {
+        padding: 30px 5px;
+    }
+
+    .iconlist {
+        gap: 30px; /* Tighten gap further */
+    }
+
+    .iconlist img {
+        width: 100px; /* Further reduce icon size */
+    }
+
+    .iconlist p {
+        font-size: 14px; /* Smaller font for compact view */
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .iconlist {
+        gap: 80px; /* Reduce gaps between icons */
+        padding: 50px 20px; /* Adjust padding */
+    }
+
+    .iconlist img {
+        width: 100px; /* Smaller icons */
+    }
+
+    .iconlist p {
+        font-size: 16px; /* Smaller text */
+    }
+}
+
+@media (max-width: 450px) {
+    .iconlist {
+        flex-direction: column; /* Stack icons vertically */
+        gap: 40px;
+    }
+
+    .iconlist img {
+        width: 80px; /* Even smaller icons */
+    }
+
+    .iconlist p {
+        font-size: 14px; /* Smaller font */
+    }
+}
+
+/* Contact Section responsive */
+
+/* For screens larger than 770px (Desktops and Larger Tablets) */
+@media (min-width: 771px) {
+    .contact {
+        height: auto; /* Flexible height based on content */
+        padding: 50px 20px; /* Add padding for spacing */
+    }
+
+    .contact-content {
+        width: 90%; /* Reduce width for better alignment */
+        max-width: 1200px; /* Limit max width */
+        padding: 30px; /* Add padding for spacing */
+    }
+
+    .contact-inner {
+        flex-direction: row; /* Maintain row layout */
+        justify-content: space-between; /* Space between sections */
+    }
+
+    .contact-image img {
+        height: 220px; /* Increase image size */
+        margin: 20px 50px; /* Add margin for separation */
+    }
+
+    .contact-image p {
+        font-size: 22px; /* Larger font size for better visibility */
+    }
+
+    .lines {
+        display: block; /* Show vertical divider */
+        height: 350px; /* Adjust height of divider */
+        width: 2px;
+        background-color: #7D6655;
+        margin: 0 50px; /* Add space around the divider */
+    }
+
+    .contact-details {
+        margin: 0 30px; /* Add margin for spacing */
+        text-align: left; /* Align details to the left */
+    }
+
+    .contact-details h1 {
+        font-size: 28px; /* Larger heading size */
+    }
+
+    .contact-number p {
+        font-size: 18px; /* Increase font size for readability */
+    }
+
+    .social-icons {
+        justify-content: flex-start; /* Align icons to the left */
+        margin-left: 0;
+    }
+
+    .contact-social-icons {
+        font-size: 30px; /* Maintain icon size */
+    }
+}
+
+/* For Extra Large Screens (Desktop Monitors) */
+@media (min-width: 1024px) {
+    .contact {
+        padding: 70px 40px; /* Add generous padding */
+    }
+
+    .contact-content {
+        max-width: 1300px; /* Further limit max width for alignment */
+    }
+
+    .contact-inner {
+        gap: 50px; /* Add gap between sections */
+    }
+
+    .contact-details h1 {
+        font-size: 30px; /* Larger headings */
+    }
+
+    .contact-number p {
+        font-size: 20px; /* Increase text size for better readability */
+    }
+
+    .contact-social-icons {
+        font-size: 35px; /* Slightly larger icons */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .social-icons{
+        left: 0px;
+        position: relative;
+    }
+    .contact {
+        height: auto; /* Allow height to adjust dynamically */
+        padding: 20px; /* Add padding for breathing space */
+    }
+
+    .contact-content {
+        width: 95%; /* Reduce width to prevent overflow */
+        height: auto; /* Allow dynamic height */
+        padding: 20px; /* Add internal padding */
+        margin: 0 auto; /* Center the content */
+    }
+
+    .contact-inner {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align the sections */
+    }
+
+    .contact-image img {
+        height: 180px; /* Reduce image size for smaller screens */
+        padding-left: 0; /* Remove excessive left padding */
+        margin: 20px 0; /* Add margin for separation */
+        margin-left: 25px;
+    }
+
+    .contact-image p {
+        font-size: 18px; /* Reduce font size for labels */
+        margin: 10px 0; /* Add separation */
+    }
+
+    .lines {
+        display: none; /* Hide the vertical divider */
+    }
+
+    .contact-details {
+        margin: 0; /* Reset margins */
+        text-align: center; /* Center align details */
+        width: 100%; /* Take up full width */
+        padding: 20px; /* Add internal padding */
+    }
+
+    .contact-details h1 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    .contact-number p {
+        font-size: 16px; /* Reduce font size for contact details */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center align social icons */
+        margin-left: 0; /* Reset margin */
+        margin-top: 10px; /* Add separation from contact details */
+    }
+
+    .contact-social-icons {
+        font-size: 30px; /* Slightly reduce icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-heading {
+        font-size: 24px; /* Further reduce heading size */
+        text-align: center; /* Ensure proper alignment */
+        padding: 20px 0; /* Reduce padding */
+    }
+
+    .contact-image img {
+        height: 150px; /* Further reduce image size */
+        margin-left: 25px;
+    }
+
+    .contact-content h1 {
+        font-size: 20px; /* Adjust font size for title */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .contact-details h1 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    .contact-number p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+
+    .contact-social-icons {
+        font-size: 25px; /* Adjust icon size */
+    }
+}
+
+
+/* Footer Section */
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 25px 30px; /* Reduced padding for smaller screens */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px; /* Larger gap between sections */
+    }
+
+    .footer-content img {
+        height: 170px; /* Smaller image for tablets */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .footer-text {
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .footer-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-text p {
+        font-size: 1rem;
+        margin-bottom: 15px; /* Add space below text */
+    }
+
+    .footer-socials {
+        justify-content: center; /* Center align socials */
+    }
+
+    .footer-copyright {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 15px; /* Further reduced padding */
+    }
+
+    .footer-content img {
+        height: 140px; /* Smaller logo for mobile */
+    }
+
+    .footer-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .footer-text p {
+        font-size: 0.9rem;
+    }
+
+    .footer-socials {
+        gap: 15px;
+    }
+
+    .footer-copyright {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content img {
+        height: 120px; /* Smallest logo for mobile */
+    }
+
+    .footer-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .footer-text p {
+        font-size: 0.85rem;
+    }
+
+    .footer-icons {
+        font-size: 25px;
+    }
+
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+}
+
+/* Adjust Footer Height */
+@media (max-width: 450px) {
+    .footer {
+        padding: 10px;
+        height: auto;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .latest, .hot {
+        height: auto; /* Adjust height dynamically based on content */
+        margin-top: 100px; /* Reduce top margin */
+        margin-bottom: 80px; /* Adjust bottom margin */
+        padding: 15px 0; /* Add internal padding */
+    }
+
+    .furniture-slider, .furniture-slider2 {
+        margin-top: 80px; /* Adjust spacing for sliders */
+        margin-bottom: 60px; /* Adjust bottom margin */
+        gap: 20px; /* Reduce gap between items */
+    }
+
+
+
+    .title-heading, .top-heading {
+        margin-top: 60px; /* Adjust heading spacing */
+        font-size: 2rem; /* Slightly smaller headings */
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .latest, .hot {
+        height: auto; /* Dynamic height */
+        margin: 60px 0; /* Unified top and bottom margin */
+        padding: 10px 15px; /* Add consistent padding */
+    }
+
+    .furniture-slider, .furniture-slider2 {
+        margin: 40px 0; /* Spacing for sliders */
+        gap: 20px; /* Consistent gap between slider items */
+    }
+
+
+
+    .title-heading, .top-heading {
+        margin-top: 50px; /* Unified heading spacing */
+        font-size: 2rem; /* Consistent heading size */
+    }
+}
+
+/* Small Screens (Mobile Phones) */
+@media (max-width: 576px) {
+    .latest, .hot {
+        height: auto; /* Allow dynamic height */
+        margin: 50px 0; /* Compact top and bottom margins */
+        padding: 5px 10px; /* Reduced padding */
+    }
+
+    .furniture-slider, .furniture-slider2 {
+        margin: 30px 0; /* Compact spacing for sliders */
+        gap: 15px; /* Reduced gap */
+    }
+    .furniture-list, .furniture-list2 {
+        margin-left: 25px;
+    }
+
+    .title-heading, .top-heading {
+        margin-top: 40px; /* Reduced heading spacing */
+        font-size: 2.5rem; /* Slightly smaller headings */
+    }
 }
