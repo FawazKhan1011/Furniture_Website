@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             features: ["Premium cushioning", "Ergonomic design", "Available in various sizes", "Stain-resistant fabric"]
         },
         8: {
-            image: "../img/table/table (8).png",
+            image: "../img/table/table (8).jpg",
             title: "Modern table 2",
             meta: "Elegant and durable for everyday use.",
             description: "A stylish and elegant table designed for maximum durability and style. Perfect for any modern home decor.",
