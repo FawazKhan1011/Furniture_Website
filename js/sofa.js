@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             features: ["High-quality fabric", "Durable frame", "Available in multiple colors", "Comfortable seating"]
         },
         2: {
-            image: "../img/Sofa/Sofa (6).jpg",
+            image: "../img/Sofa/Sofa (2).jpg",
             title: "Modern Sofa 2",
             meta: "Elegant and durable for everyday use.",
             description: "A stylish and elegant sofa designed for maximum durability and style. Perfect for any modern home decor.",
