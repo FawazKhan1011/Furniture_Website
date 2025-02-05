@@ -293,6 +293,33 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* For Extra Large Screens (Desktop Monitors) */
 @media (min-width: 1024px) {
+    .iconlist {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 80px; /* Adjust gap between items */
+        padding: 40px 20px; /* Add padding */
+    }
+
+    .iconlist div {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Ensure center alignment */
+        text-align: center;
+        width: 150px; /* Set a fixed width to maintain alignment */
+    }
+
+    .iconlist img {
+        width: 130px; /* Ensure uniform image size */
+        height: auto;
+    }
+
+    .iconlist p {
+        font-size: 18px;
+        margin-top: 8px; /* Ensure proper spacing below image */
+        width: 100%;
+    }
     .contact {
         padding: 70px 40px; /* Add generous padding */
     }
@@ -320,6 +347,27 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 @media (max-width: 768px) {
+    .iconlist {
+        gap: 50px; /* Reduce spacing for smaller screens */
+        padding: 30px 10px;
+    }
+
+    .iconlist div {
+        width: 130px; /* Adjust width */
+    }
+
+    .iconlist img {
+        width: 110px; /* Resize images */
+    }
+
+    .iconlist p {
+        font-size: 16px;
+        text-align: center; /* Ensure text remains centered */
+        margin-right: 15px;
+    }
+    #standrack{
+        margin-top: 10px;
+    }
     .social-icons{
         left: 0px;
         position: relative;
@@ -507,6 +555,28 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* Adjust Footer Height */
 @media (max-width: 450px) {
+    .iconlist {
+        gap: 30px; /* Adjust spacing */
+    }
+
+    .iconlist div {
+        width: 100px; /* Set fixed width for alignment */
+        text-align: left; /* Shift text slightly to the left */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Align text to the left */
+    }
+
+    .iconlist img {
+        width: 80px; /* Reduce image size */
+        margin: 0 auto; /* Keep images centered */
+    }
+
+    .iconlist p {
+        font-size: 14px;
+        margin-top: 4px;
+        margin-left: 15px; /* Shift text slightly to the left */
+    }
     .footer {
         padding: 10px;
         height: auto;
@@ -559,6 +629,23 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* Small Screens (Mobile Phones) */
 @media (max-width: 576px) {
+    .iconlist {
+        flex-direction: column; /* Stack items vertically */
+        gap: 40px; /* Adjust spacing */
+    }
+
+    .iconlist div {
+        width: 120px;
+    }
+
+    .iconlist img {
+        width: 100px;
+    }
+
+    .iconlist p {
+        font-size: 15px;
+        margin-top: 5px;
+    }
     .latest, .hot {
         height: auto; /* Allow dynamic height */
         margin: 50px 0; /* Compact top and bottom margins */
