@@ -40,39 +40,71 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         4: {
             image: "../img/Sofa/Sofa (4).jpg",
-            title: "Modern Sofa 2",
-            meta: "Elegant and durable for everyday use.",
-            description: "A stylish and elegant sofa designed for maximum durability and style. Perfect for any modern home decor.",
-            features: ["Premium cushioning", "Ergonomic design", "Available in various sizes", "Stain-resistant fabric"]
-        },
+            title: "Chesterfield Velvet Sofa",
+            meta: "Elegant and luxurious, a timeless centerpiece for any space.",
+            description: "This Chesterfield-style sofa features plush velvet upholstery with deep button tufting, offering both sophistication and comfort. Its rolled arms and sturdy wooden frame make it a perfect blend of durability and style.",
+            features: [
+                "Premium velvet upholstery",
+                "Deep button tufting",
+                "Sturdy wooden frame",
+                "Classic Chesterfield design",
+                "Available in multiple colors"
+            ]
+        }
+        ,
         5: {
-            image: "../img/Sofa/Sofa (5).jpg",
-            title: "Modern Sofa 2",
-            meta: "Elegant and durable for everyday use.",
-            description: "A stylish and elegant sofa designed for maximum durability and style. Perfect for any modern home decor.",
-            features: ["Premium cushioning", "Ergonomic design", "Available in various sizes", "Stain-resistant fabric"]
+            "image": "../img/Sofa/Sofa (5).jpg",
+            "title": "L-Shaped Sofa Bed",
+            "meta": "Stylish and functional, perfect for small spaces.",
+            "description": "This L-shaped sofa bed offers a perfect combination of style and functionality. It easily transforms into a spacious bed, making it ideal for small apartments or guest rooms. The plush cushions provide maximum comfort, while the hidden storage compartments offer added convenience.",
+            "features": [
+                "Convertible sofa bed",
+                "Hidden storage compartments",
+                "Durable and soft fabric",
+                "L-shaped design for space efficiency",
+                "Includes stylish floral cushions"
+            ]
         },
         6: {
-            image: "../img/Sofa/Sofa (6).jpg",
-            title: "Modern Sofa 2",
-            meta: "Elegant and durable for everyday use.",
-            description: "A stylish and elegant sofa designed for maximum durability and style. Perfect for any modern home decor.",
-            features: ["Premium cushioning", "Ergonomic design", "Available in various sizes", "Stain-resistant fabric"]
+            "image": "../img/Sofa/Sofa (6).jpg",
+            "title": "Luxury Sectional Sofa Bed",
+            "meta": "Spacious and comfortable, perfect for family gatherings.",
+            "description": "Designed for ultimate comfort, this luxury sectional sofa bed features a spacious layout, making it perfect for lounging, entertaining, or sleeping. Its premium upholstery and sturdy frame ensure durability, while the pull-out bed function adds versatility.",
+            "features": [
+                "Premium soft fabric upholstery",
+                "Pull-out bed function",
+                "Spacious sectional design",
+                "Sturdy wooden frame",
+                "Elegant quilted stitching"
+            ]
         },
         7: {
-            image: "../img/Sofa/Sofa (7).jpg",
-            title: "Modern Sofa 2",
-            meta: "Elegant and durable for everyday use.",
-            description: "A stylish and elegant sofa designed for maximum durability and style. Perfect for any modern home decor.",
-            features: ["Premium cushioning", "Ergonomic design", "Available in various sizes", "Stain-resistant fabric"]
-        },
-        8: {
-            image: "../img/Sofa/Sofa (8).jpg",
-            title: "Modern Sofa 2",
-            meta: "Elegant and durable for everyday use.",
-            description: "A stylish and elegant sofa designed for maximum durability and style. Perfect for any modern home decor.",
-            features: ["Premium cushioning", "Ergonomic design", "Available in various sizes", "Stain-resistant fabric"]
+            "image": "../img/Sofa/Sofa (7).jpg",
+            "title": "Golden L-Shaped Sofa",
+            "meta": "Elegant and spacious, ideal for a luxurious living room setup.",
+            "description": "This L-shaped sofa offers a perfect blend of style and comfort with its plush cushioning and modern design. The golden fabric adds a touch of sophistication, making it an excellent choice for both contemporary and classic interiors.",
+            "features": [
+                "Premium-quality fabric upholstery",
+                "Sturdy and durable frame",
+                "Adjustable headrests for added comfort",
+                "Spacious seating with a chaise lounge",
+                "Hidden storage compartment under the chaise"
+            ]
         }
+        ,
+        8: {
+            "image": "../img/Sofa/Sofa (8).jpg",
+            "title": "Luxury Sectional Sofa",
+            "meta": "Spacious and comfortable, designed for modern homes.",
+            "description": "This premium sectional sofa is crafted for those who love both aesthetics and comfort. Featuring a soft, neutral-tone fabric with decorative cushions, it creates a cozy yet stylish ambiance. The additional storage space and elegant design make it a must-have for any home.",
+            "features": [
+                "High-quality fabric with soft cushioning",
+                "Elegant sectional design for ample seating",
+                "Includes decorative pillows for extra comfort",
+                "Glass-top coffee table with a modern finish",
+                "Sturdy construction with long-lasting durability"
+            ]
+        }        
     };
 
     // Select modal elements
