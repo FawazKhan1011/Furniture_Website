@@ -665,3 +665,28 @@ input[type="search"]::-webkit-search-cancel-button {
         font-size: 2.5rem; /* Slightly smaller headings */
     }
 }
+/* Responsive Modal for Mobile Screens */
+@media (max-width: 766px) {
+    .modal-content {
+        flex-direction: column; /* Stack vertically on mobile */
+        width: 95vw; /* 95% of screen width */
+        height: 95vh; /* 95% of screen height */
+    }
+
+    .modal-left {
+        height: 40%; /* Top 40% for image */
+    }
+
+    .modal-right {
+        height: 60%; /* Bottom 60% for content */
+        padding: 20px;
+    }
+
+    .modal-right h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-right p, .modal-right ul li {
+        font-size: 1rem;
+    }
+}
