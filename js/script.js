@@ -145,3 +145,28 @@ document.addEventListener('DOMContentLoaded', function () {
     enableGrabScroll(furnitureSlider1);
     enableGrabScroll(furnitureSlider2);
 });
+// Open modal and reset scroll
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const modal = document.getElementById('product-modal');
+        const modalContent = document.querySelector('.modal-content');
+
+        // Open the modal first
+        modal.style.display = 'flex';
+
+        // Wait a moment, then reset scroll
+        setTimeout(() => {
+            modalContent.scrollTop = 0;
+            const modalRight = document.querySelector('.modal-right');
+            modalRight.scrollTop = 0;
+        }, 10);
+    });
+});
+
+// Close the modal correctly
+document.querySelector('.close-btn').addEventListener('click', () => {
+    const modal = document.getElementById('product-modal');
+    modal.style.display = 'none';
+});
+
+
