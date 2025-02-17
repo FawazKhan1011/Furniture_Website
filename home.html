@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Efkay | Home Furnitures</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
     <style>
         @keyframes fadeIn {
             from {
@@ -33,230 +33,206 @@
     </style>
 </head>
 <body>
-<header>
-    <nav>
-        <div class="logo">
-            <a href="#">efkay</a>
+    <!-- Intro Animation -->
+    <div id="intro">
+        <div class="intro-card" style="display: none;">
+            <img src="./img/icons/efkay logo full.png" alt="Efkay Logo">
         </div>
-        <ul class="links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="home.html#furniture-cat">Furniture</a></li>
-            <li><a href="home.html#contacts">Contact</a></li>
-            <li><a href="home.html#footer">About</a></li>
-        </ul>
-        <div class="search-container">
-            <input type="search" id="search-input" placeholder="Search...">
-            <span id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-        </div>
-        <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </nav>
-    <ul class="dropdown_menu">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="home.html#furniture-cat">Furniture</a></li>
-        <li><a href="home.html#contacts">Contact</a></li>
-        <li><a href="home.html#footer">About</a></li>
-    </ul>
-</header>
+    </div>
 
-<div class="upper">
-    <div class="slider">
-        <div class="list">
-            <div class="item">
-                <img src="../img/slide1.jpg" alt="">
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Header -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#">efkay</a>
+                </div>
+                <ul class="links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="home.html#furniture-cat">Furniture</a></li>
+                    <li><a href="home.html#contacts">Contact</a></li>
+                    <li><a href="home.html#footer">About</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="search" id="search-input" placeholder="Search...">
+                    <span id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <ul class="dropdown_menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html#furniture-cat">Furniture</a></li>
+                <li><a href="home.html#contacts">Contact</a></li>
+                <li><a href="home.html#footer">About</a></li>
+            </ul>
+        </header>
+
+        <!-- Slider Section -->
+        <div class="upper">
+            <div class="slider">
+                <div class="list">
+                    <div class="item"><img src="../img/slide1.jpg" alt=""></div>
+                    <div class="item"><img src="../img/slide2.jpg" alt=""></div>
+                    <div class="item"><img src="../img/slide3.jpg" alt=""></div>
+                    <div class="item"><img src="../img/slide4.jpg" alt=""></div>
+                    <div class="item"><img src="../img/slide5.jpg" alt=""></div>
+                </div>
+                <div class="buttons">
+                    <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+                    <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
             </div>
-            <div class="item">
-                <img src="../img/slide2.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="../img/slide3.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="../img/slide4.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="../img/slide5.jpg" alt="">
-            </div>
+            <ul class="dots">
+                <li data-index="0"></li>
+                <li data-index="1"></li>
+                <li data-index="2"></li>
+                <li data-index="3"></li>
+                <li data-index="4"></li>
+            </ul>
         </div>
-        <div class="buttons">
-            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
-            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
-        </div>
-    </div>
-    <ul class="dots">
-        <li data-index="0"></li>
-        <li data-index="1"></li>
-        <li data-index="2"></li>
-        <li data-index="3"></li>
-        <li data-index="4"></li>
-    </ul>
-</div>
-<div class="specials">
-    <div class="latest">
-        <h1 class="title-heading">Latest Additions</h1>
-        <div class="furniture-slider">
-            <div class="furniture-list">
-                <div class="furniture-item">
-                    <img src="../img/table/table (8).jpg" alt="Image 1">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/Sofa/Sofa (3).jpg" alt="Image 2">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/Sofa/Sofa (7).jpg" alt="Image 3">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/bed/bed (7).jpg" alt="Image 4">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/stand/stand (2).png" alt="Image 5">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/cabinet/cabinet (5).jpg" alt="Image 6">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="hot">
-        <h1 class="top-heading">Top Products</h1>
-        <div class="furniture-slider2">
-            <div class="furniture-list2">
-                <div class="furniture-item">
-                    <img src="../img/Sofa/Sofa (2).jpg" alt="Image 1">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/stand/stand (1).jpg" alt="Image 2">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/bed/bed (4).jpg" alt="Image 3">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/Sofa/Sofa (8).jpg" alt="Image 4">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/stand/stand (3).jpg" alt="Image 5">
-                </div>
-                <div class="furniture-item">
-                    <img src="../img/table/table (8).jpg" alt="Image 6">
-                </div>
-            </div>
-        </div>
-    </div>
-        <div class="category">
-            <section id="furniture-cat">
-                <div class="iconlist">
-                    <div class="chair">
-                        <a href="sofa.html" target="_self">
-                            <img src="../img/icons/armchair.png" alt="Sofa" />
-                        </a>
-                        <p>SOFA & CUMBED</p>
-                    </div>
-                    <div class="sofa">
-                        <a href="table.html" target="_self">
-                            <img src="../img/icons/table.png" alt="Table" />
-                        </a>
-                        <p>DINING TABLE</p>
-                    </div>
-                    <div class="cabinet">
-                        <a href="cabinet.html" target="_self">
-                            <img src="../img/icons/cabinet-drawer.png" alt="Cabinet" />
-                        </a>
-                        <p>WARDROBE</p>        
-                    </div>
-                    <div class="bed">
-                        <a href="bed.html" target="_self">
-                            <img src="../img/icons/double-bed.png" alt="Bed" />
-                        </a>
-                        <p>BED</p>                 
-                    </div>
-                    <div class="stand">
-                        <a href="stand.html" target="_self">
-                            <img src="../img/icons/nightstand.png" alt="Stand" />
-                        </a>
-                        <p id="standrack">STAND & RACK</p>
+
+        <!-- Specials Section -->
+        <div class="specials">
+            <div class="latest">
+                <h1 class="title-heading">Latest Additions</h1>
+                <div class="furniture-slider">
+                    <div class="furniture-list">
+                        <div class="furniture-item"><img src="../img/table/table (8).jpg" alt="Image 1"></div>
+                        <div class="furniture-item"><img src="../img/Sofa/Sofa (3).jpg" alt="Image 2"></div>
+                        <div class="furniture-item"><img src="../img/Sofa/Sofa (7).jpg" alt="Image 3"></div>
+                        <div class="furniture-item"><img src="../img/bed/bed (7).jpg" alt="Image 4"></div>
+                        <div class="furniture-item"><img src="../img/stand/stand (2).png" alt="Image 5"></div>
+                        <div class="furniture-item"><img src="../img/cabinet/cabinet (5).jpg" alt="Image 6"></div>
                     </div>
                 </div>
-            </section> 
-        </div>
-    </div>
-</div>
-<section id="contacts">
-    <div class="contact">
-        <div class="contact-heading">
-            <h1>Contact us here</h1>
-        </div>
-        <div class="contact-content">
-            <h1>Get in touch with us for further details and to place orders</h1>
-            <div class="contact-inner">
-                <div class="contact-image">
-                    <img src="/img/icons/user.png" alt="">
-                    <p>Faiyaz Khan</p>
-                    <p id="Owner">Owner</p>
-                </div>
-                <div class="lines">
-                </div>
-                <div class="contact-details">
-                    <div class="contact-number">
-                        <h1>Contact</h1>
-                        <p>9967722400</p>
-                        <p>kfaizu@yahoo.com</p>
+            </div>
+
+            <div class="hot">
+                <h1 class="top-heading">Top Products</h1>
+                <div class="furniture-slider2">
+                    <div class="furniture-list2">
+                        <div class="furniture-item"><img src="../img/Sofa/Sofa (2).jpg" alt="Image 1"></div>
+                        <div class="furniture-item"><img src="../img/stand/stand (1).jpg" alt="Image 2"></div>
+                        <div class="furniture-item"><img src="../img/bed/bed (4).jpg" alt="Image 3"></div>
+                        <div class="furniture-item"><img src="../img/Sofa/Sofa (8).jpg" alt="Image 4"></div>
+                        <div class="furniture-item"><img src="../img/stand/stand (3).jpg" alt="Image 5"></div>
+                        <div class="furniture-item"><img src="../img/table/table (8).jpg" alt="Image 6"></div>
                     </div>
-                    <div class="contact-socials">
-                        <div class="social-heading">
-                            <h1>Socials</h1>
+                </div>
+            </div>
+
+            <!-- Furniture Category -->
+            <div class="category">
+                <section id="furniture-cat">
+                    <div class="iconlist">
+                        <div class="chair">
+                            <a href="sofa.html"><img src="../img/icons/armchair.png" alt="Sofa" /></a>
+                            <p>SOFA & CUMBED</p>
                         </div>
-                        <div class="social-icons">
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=efkayfurnitures@gmail.com" target="_blank">
-                                <ion-icon id="icons" name="mail-outline"class="contact-social-icons"></ion-icon>
-                            </a>
-                            <a href="https://wa.me/9967722400">
-                                <ion-icon id="icons" name="logo-whatsapp"class="contact-social-icons"></ion-icon>
-                            </a>
-                            <a href="">
-                                <ion-icon id="icons" name="logo-instagram" class="contact-social-icons"></ion-icon>
-                            </a>
+                        <div class="sofa">
+                            <a href="table.html"><img src="../img/icons/table.png" alt="Table" /></a>
+                            <p>DINING TABLE</p>
+                        </div>
+                        <div class="cabinet">
+                            <a href="cabinet.html"><img src="../img/icons/cabinet-drawer.png" alt="Cabinet" /></a>
+                            <p>WARDROBE</p>
+                        </div>
+                        <div class="bed">
+                            <a href="bed.html"><img src="../img/icons/double-bed.png" alt="Bed" /></a>
+                            <p>BED</p>
+                        </div>
+                        <div class="stand">
+                            <a href="stand.html"><img src="../img/icons/nightstand.png" alt="Stand" /></a>
+                            <p id="standrack">STAND & RACK</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contacts">
+            <div class="contact">
+                <div class="contact-heading">
+                    <h1>Contact us here</h1>
+                </div>
+                <div class="contact-content">
+                    <h1>Get in touch with us for further details and to place orders</h1>
+                    <div class="contact-inner">
+                        <div class="contact-image">
+                            <img src="/img/icons/user.png" alt="">
+                            <p>Faiyaz Khan</p>
+                            <p id="Owner">Owner</p>
+                        </div>
+                        <div class="lines"></div>
+                        <div class="contact-details">
+                            <div class="contact-number">
+                                <h1>Contact</h1>
+                                <p>9967722400</p>
+                                <p>efkayfurnitures@gmail.com</p>
+                            </div>
+                            <div class="contact-socials">
+                                <div class="social-heading">
+                                    <h1>Socials</h1>
+                                </div>
+                                <div class="social-icons">
+                                    <a href="mailto:efkayfurnitures@gmail.com" target="_blank">
+                                        <ion-icon id="icons" name="mail-outline" class="contact-social-icons"></ion-icon>
+                                    </a>
+                                    <a href="https://wa.me/9967722400">
+                                        <ion-icon id="icons" name="logo-whatsapp" class="contact-social-icons"></ion-icon>
+                                    </a>
+                                    <a href="#">
+                                        <ion-icon id="icons" name="logo-instagram" class="contact-social-icons"></ion-icon>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="upper-footer"></div>
+        <div class="footer">
+            <section id="footer">
+                <footer>
+                    <div class="footer-content">
+                        <img src="../img/icons/efkay logo.png" alt="Logo">
+                        <div class="footer-text">
+                            <h3>"Approach us and make your house a home"</h3>
+                            <p>
+                                At Efkay, we believe that furniture should not only be functional but also a reflection of personal style.
+                                Our curated collection combines timeless designs with modern aesthetics, ensuring each piece brings elegance and comfort to your home.
+                                We are dedicated to providing high-quality furniture that lasts for generations.
+                            </p>
+                            <div class="footer-socials">
+                                <a href="mailto:efkayfurnitures@gmail.com" target="_blank">
+                                    <ion-icon name="mail-outline" class="footer-icons"></ion-icon>
+                                </a>
+                                <a href="https://wa.me/9967722400">
+                                    <ion-icon name="logo-whatsapp" class="footer-icons"></ion-icon>
+                                </a>
+                                <a href="#">
+                                    <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 Efkay Furniture. All rights reserved.</p>
+                    </div>
+                </footer>
+            </section>
         </div>
     </div>
-</section>
-<div class="upper-footer"></div>
-<div class="footer">
-    <section id="footer">
-        <footer>
-            <div class="footer-content">
-                <img src="../img/icons/efkay logo.png" alt="Logo">
-                <div class="footer-text">
-                    <h3>"Approach us and make your house a home"</h3>
-                    <p>
-                        At Efkay, we believe that furniture should not only be functional but also a reflection of personal style. 
-                        Our curated collection combines timeless designs with modern aesthetics, ensuring each piece brings elegance and comfort to your home. 
-                        We are dedicated to providing high-quality furniture that lasts for generations.
-                    </p>
-                    <div class="footer-socials">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=efkayfurnitures@gmail.com" target="_blank">
-                            <ion-icon name="mail-outline"class="footer-icons"></ion-icon>
-                        </a>
-                        <a href="https://wa.me/9967722400">
-                            <ion-icon name="logo-whatsapp"class="footer-icons"></ion-icon>
-                        </a>
-                        <a href="">
-                            <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
-                        </a>                        
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 Efkay Furniture. All rights reserved.</p>
-            </div>
-        </footer>
-    </section>
-</div>
-<script src="../js/script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
