@@ -78,7 +78,7 @@ nav .links {
 }
 
 nav .toggle_btn {
-    color: #ffffff;
+    color:#E5DFD6;
     font-size: 1.5rem;
     cursor: pointer;
     display: none; /* Initially hidden */
@@ -213,6 +213,7 @@ nav .toggle_btn {
 
 .fa-angle-left, .fa-angle-right {
     font-size: 2em;
+    color:#4b3d33;
 }
 
 .dots {
