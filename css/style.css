@@ -686,3 +686,84 @@ hr {
 .close-btn:hover {
     color: black;
 }
+
+/* Intro Animation Styles */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E5DFD6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.intro-card {
+    position: relative;
+    width: 30vw;  /* Scales based on viewport width */
+    max-width: 300px; /* Prevents it from getting too big on large screens */
+    height: auto; /* Keeps the aspect ratio */
+    transform: translateY(100vh);
+    animation: 
+        bounceIn 1.8s ease-out forwards, 
+        scaleUp 1s ease-out 3s forwards;
+}
+
+/* Ensures proper scaling on small screens */
+.intro-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Adjust for very small screens (phones) */
+@media (max-width: 480px) {
+    .intro-card {
+        width: 60vw; /* Take up more space on small screens */
+        max-width: 250px; /* Reduce max size for small screens */
+    }
+}
+
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(100vh);
+    }
+    60% {
+        transform: translateY(-10px); /* Moves slightly up */
+    }
+    80% {
+        transform: translateY(5px); /* Moves slightly down (settles) */
+    }
+    100% {
+        transform: translateY(5px); /* Final position */
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: translateY(5px) scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(5px) scale(0);
+        opacity: 0;
+    }
+}
+#main-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s ease-in-out; /* Smooth fade-in */
+}
+
+/* Prevents fade-in animation after session storage is set */
+.instant-visible {
+    transition: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
